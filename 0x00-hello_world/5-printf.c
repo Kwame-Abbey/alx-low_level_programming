@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - (Outputs a string using the printf function)
+ * main - (A function that uses printf to output a string)
  *
  * Retrun: Always 0 (Success)
  */
