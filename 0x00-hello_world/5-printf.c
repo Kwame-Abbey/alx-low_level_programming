@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - (A function that uses printf to output a string)
+ * main - Entry point.
+ *
+ *description: A function that uses printf to output a string of characters
  *
  * Retrun: Always 0 (Success)
  */
