@@ -10,15 +10,18 @@ int main(void)
 {
 	int a = 44, b = 48, c = 32;
 
-	while (b < 57)
+	while (b <= 57)
 	{
 		putchar(b);
-		putchar(a);
-		putchar(c);
+		if (b != 57)
+		{
+			putchar(a);
+			putchar(c);
+		}
 		b++;
 	}
 
-	putchar(57);
+	putchar('\n');
 
 	return (0);
 }
