@@ -8,8 +8,6 @@
 
 int main(void)
 {
-	char a = 'a';
-
 	print_alphabet();
 	_putchar('\n');
 	return (0);
