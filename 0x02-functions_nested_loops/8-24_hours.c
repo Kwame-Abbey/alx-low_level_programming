@@ -12,7 +12,7 @@ void jack_bauer(void)
 
 	for (a = 48; a < 51; a++)
 	{
-		for (b = 48; b < 57; b++)
+		for (b = 48; b <= 57; b++)
 		{
 			if (b == 52 && a == 50)
 			{
@@ -21,7 +21,7 @@ void jack_bauer(void)
 
 			for (c = 48; c < 54; c++)
 			{
-				for (d = 48; d < 57; d++)
+				for (d = 48; d <= 57; d++)
 				{
 					_putchar(a);
 					_putchar(b);
