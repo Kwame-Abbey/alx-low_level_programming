@@ -3,7 +3,7 @@
 /**
  * jack_bauer - (Prints every minute of the day)
  *
- * Return: Always 0 (Success)
+ * Return: Void
  */
 
 void jack_bauer(void)
@@ -33,5 +33,4 @@ void jack_bauer(void)
 			}
 		}
 	}
-	return (0);
 }
