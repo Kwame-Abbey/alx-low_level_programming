@@ -14,9 +14,14 @@ void times_table(void)
 	{
 		for (b = 48; b <= 57; b++)
 		{
-			_putchar(a * b);
-			_putchar(44);
-			_putchar(32);
+			int product = a * b;
+			_putchar(product + '0');
+			
+			if (b != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
