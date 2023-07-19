@@ -3,23 +3,23 @@
 /**
  * main - print first 50 fibonacci.
  *
- * return: Always 0.
+ * Return: Always 0.
  */
 
 int main(void)
 {
-	int i, x = 1, y = 2, sum = 0;
+	long int i, x = 1, y = 2, sum = 0;
 
 	for (i = 0; i < 49; i++)
 	{
-		printf("%d", x);
+		printf("%ld", x);
 		sum = x + y;
 		x = y;
 		y = sum;
 
 		if (i == 48)
 		{
-			printf("%d", x);
+			printf("%ld", x);
 		}
 	}
 	return (0);
