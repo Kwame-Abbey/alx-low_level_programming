@@ -7,7 +7,7 @@
  * Return: Void
  */
 
-void print_naturals(void)
+int print_naturals(void)
 {
 	int a, sum = 0;
 
@@ -19,4 +19,5 @@ void print_naturals(void)
 		}
 	}
 	printf("%d\n", sum);
+	return (0);
 }
