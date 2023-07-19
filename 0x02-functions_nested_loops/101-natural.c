@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * print_naturals - (Prints the sum of all multiples of 3 and 5).
+ * main - (Prints the sum of all multiples of 3 and 5).
  *
- * Return: Void
+ * Return: Always 0.
  */
 
-int print_naturals(void)
+int main(void)
 {
 	int a, sum = 0;
 
