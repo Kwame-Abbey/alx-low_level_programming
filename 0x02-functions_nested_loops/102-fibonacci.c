@@ -19,7 +19,7 @@ int main(void)
 
 		if (i == 48)
 		{
-			printf("%ld", x);
+			printf("%ld\n", x);
 		}
 	}
 	return (0);
