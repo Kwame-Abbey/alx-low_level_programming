@@ -13,10 +13,10 @@ int _abs(int n)
 
 	if (n >= 0)
 	{
-		_putchar(n);
+		return (n);
 	} else if (n < 0)
 	{
-		_putchar(n + (n * 2));
+		return (n + (n * 2));
 	}
 
 	return (0);
