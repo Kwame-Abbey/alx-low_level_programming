@@ -12,4 +12,6 @@ void print_line(int);
 void print_diagonal(int);
 void print_square(int);
 void print_triangle(int);
+int isPrime(long int);
+long int biggestFactor(long int);
 #endif
