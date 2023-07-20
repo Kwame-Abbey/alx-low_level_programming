@@ -3,7 +3,7 @@
 /**
  * print_triangle - Print diagonals
  *
- * @size: Sze of the triangle
+ * @size: Size of the triangle
  *
  * Return: void
  */
