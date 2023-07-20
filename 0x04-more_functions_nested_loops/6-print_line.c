@@ -5,7 +5,7 @@
  *
  * @n: Number of times character is printed
  *
- * Return: Always 0
+ * Return: Void
  */
 
 void print_line(int n)
