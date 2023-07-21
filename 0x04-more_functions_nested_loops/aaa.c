@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
  * main - prints the biggest prime factor of a number.
  *
- * Return: Always 0
+ * Return: Always 0.
  */
-
 int main(void)
 {
 	long int number;
@@ -16,18 +14,18 @@ int main(void)
 	if (isPrime(number) == 1)
 	{
 		printf("%ld\n", number);
-	} else
+	}
+	else
 	{
 		printf("%ld\n", biggestFactor(number));
 	}
 	return (0);
 }
 /**
- * isPrime - analyse if a number is prime or not
+ * isPrime - analise if a number is prime or not
  * @n: number to check
- * Return: true if it is a prime false if not
+ * Return: true if it is prime false if not
  */
-
 int isPrime(long int n)
 {
 	int i;
@@ -35,10 +33,12 @@ int isPrime(long int n)
 	if (n <= 1)
 	{
 		return (0);
-	} else if (n == 2)
+	}
+	else if (n == 2)
 	{
 		return (1);
-	} else if (n > 2)
+	}
+	else
 	{
 		for (i = 2; i < n; i++)
 		{
@@ -49,14 +49,12 @@ int isPrime(long int n)
 		}
 	return (1);
 	}
-	return (0);
 }
 /**
  * biggestFactor - returns the biggest prime factor of a number
  * @a: number to check
  * Return: biggest factor
  */
-
 long int biggestFactor(long int a)
 {
 	long int i, factor;
@@ -64,13 +62,21 @@ long int biggestFactor(long int a)
 	factor = a;
 	for (i = 2; i <= factor; i++)
 	{
-		if ((factor % i == 0) && (isPrime(i) == 1))
+		if (isPrime(factor) == 1)
 		{
-			factor = factor / i;
-			continue;
-		} else
+			break;
+		}
+		else
 		{
-			factor = factor;
+			if ((factor % i == 0) && (isPrime(i) == 1))
+			{
+				factor = factor / i;
+				continue;
+			}
+			else
+			{
+				factor = factor;
+			}
 		}
 	}
 	return (factor);
