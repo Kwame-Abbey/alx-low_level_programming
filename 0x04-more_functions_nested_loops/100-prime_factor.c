@@ -49,6 +49,7 @@ int isPrime(long int n)
 		}
 		return (1);
 	}
+	return (0);
 }
 /**
  * biggestFactor - returns the biggest prime factor of a number
@@ -72,5 +73,5 @@ long int biggestFactor(long int a)
 			factor = factor;
 		}
 	}
-	return (factor)
+	return (factor);
 }
