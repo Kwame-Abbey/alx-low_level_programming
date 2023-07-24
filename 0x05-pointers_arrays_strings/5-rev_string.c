@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	int index = 0;
 
-	while (s[index] != '\0')
+	while (*(s + index) != '\0')
 	{
 		index++;
 	}
@@ -19,7 +19,7 @@ void rev_string(char *s)
 
 	while (index >= 0)
 	{
-		_putchar(s[index]);
+		_putchar(*(s + index));
 		index--;
 	}
 }
