@@ -33,9 +33,9 @@ char *str_concat(char *s1, char *s2)
 	if (ptr)
 	{
 		for (i = 0; i < len1; i++)
-			*(ptr + 1) = *(s1 + i);
-		for (i = len1; i < len1 + len2; i++)
-			*(ptr + i) = *(s2 + i);
+			*(ptr + i) = *(s1 + i);
+		for (i = 0; i < len1 + len2; i++)
+			*(ptr + len1 + i) = *(s2 + i);
 		*(ptr + len1 + len2) = '\0';
 		return (ptr);
 	} else
