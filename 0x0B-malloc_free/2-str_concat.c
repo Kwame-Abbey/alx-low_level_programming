@@ -15,18 +15,15 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int i, len1, len2;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		len1 = len2 = 0;
-	} else if (s1 == NULL)
+	if (s1 == NULL)
 		len1 = 0;
-	else if (s2 == NULL)
+	else
+		len = _strlen(s1);
+
+	if (s2 == NULL)
 		len2 = 0;
 	else
-	{
-		len1 = _strlen(s1);
 		len2 = _strlen(s2);
-	}
 
 	ptr = (char *) malloc(((len1 + len2) * sizeof(char)) + 1);
 
