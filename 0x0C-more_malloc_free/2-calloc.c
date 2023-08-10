@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void *_memset(void *s, unsigned int c, unsigned int n);
+char *_memset(char *s, char c, unsigned int n);
 
 /**
  * _calloc - (Allocates memory for an array, using malloc)
@@ -35,7 +35,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * Return: Pointer to memory
  */
 
-void *_memset(void *s, unsigned int c, unsigned int n)
+char *_memset(char *s, char c, unsigned int n)
 {
 	unsigned int i;
 
