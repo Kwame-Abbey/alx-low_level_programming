@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+void *_memset(void *s, unsigned int c, unsigned int n);
+
 /**
  * _calloc - (Allocates memory for an array, using malloc)
  * @nmemb: Number of elements
@@ -20,7 +22,24 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (ptr == NULL)
 		return (NULL);
-	memset(ptr, 0, nmemb * size);
+	_memset(ptr, 0, nmemb * size);
 
 	return (ptr);
+}
+
+/**
+ * _memset - (Fills first n bytes with a constant byte c)
+ * @s: Pointer variable
+ * @c: constant byte
+ * @n: Number of first bytes to be filled
+ * Return: Pointer to memory
+ */
+
+void *_memset(void *s, unsigned int c, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = c;
+	return (s);
 }
