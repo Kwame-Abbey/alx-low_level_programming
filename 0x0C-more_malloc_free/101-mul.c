@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 {
 	int i;
 	unsigned int j;
-	long long result = 1;
+	int result = 1;
 
 	if (argc != 3)
 	{
@@ -35,9 +35,9 @@ int main(int argc, char **argv)
 			}
 
 		}
-		result *= atoll(argv[i]);
+		result *= atoi(argv[i]);
 	}
-	printf("%lld\n", result);
+	printf("%d\n", result);
 
 	return (0);
 }
