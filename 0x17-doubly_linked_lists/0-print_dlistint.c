@@ -3,7 +3,7 @@
 /**
  * print_dlistint - prints all the elements of a doubly linked list
  *
- * @head: Pointer to head of linked list
+ * @h: Pointer to head of linked list
  *
  * Return: number of nodes
  */
