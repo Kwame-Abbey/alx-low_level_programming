@@ -1,34 +1,45 @@
 #include "main.h"
+
 /**
- *rot13 - encodes strings using rot13.
- *@s: pointer to string.
+ * rot13 - encodes a string using rot13
+ * @s: string
  *
- *Return: pointer to encoded string.
+ * Return: Pointer to string
  */
+
 char *rot13(char *s)
 {
-	int stringCount, rotation;
-	char r1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-		     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-		     'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-		     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
-		     'Z'};
-	char r2[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-		     'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-		     'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
-		     'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-		     'M'};
+	int index, alpha_index;
 
-	for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
+	char alpha[52] = {'a', 'b', 'c', 'd', 'e', 'f',
+			  'g', 'h', 'i', 'j', 'k', 'l', 'm',
+			  'n', 'o', 'p', 'q', 'r', 's', 't',
+			  'u', 'v', 'w', 'x', 'y', 'z',
+			  'A', 'B', 'C', 'D', 'E', 'F', 'G',
+			  'H', 'I', 'J', 'K', 'L', 'M',
+			  'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+			  'U', 'V', 'W', 'X', 'Y', 'Z'};
+
+	char rot13[52] = {'n', 'o', 'p', 'q', 'r', 's',
+			  't', 'u', 'v', 'w', 'x', 'y', 'z',
+			  'a', 'b', 'c', 'd', 'e', 'f',
+			  'g', 'h', 'i', 'j', 'k', 'l', 'm',
+			  'N', 'O', 'P', 'Q', 'R', 'S',
+			  'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+			  'A', 'B', 'C', 'D', 'E', 'F',
+			  'G', 'H', 'I', 'J', 'K', 'L', 'M'};
+
+	for (index = 0; s[index] != '\0'; index++)
 	{
-		for (rotation = 0; rotation < 53; rotation++)
+		for (alpha_index = 0; alpha_index <= 51; alpha_index++)
 		{
-			if (r1[rotation] == s[stringCount])
+			if (s[index] == alpha[alpha_index])
 			{
-				s[stringCount] = r2[rotation];
+				s[index] = rot13[alpha_index];
 				break;
-			}
+		}
 		}
 	}
+
 	return (s);
 }
